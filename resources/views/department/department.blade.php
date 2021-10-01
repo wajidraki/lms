@@ -32,10 +32,11 @@
            <td>{{$loop->iteration}}</td>
            <td>{{$department->name}}</td>
        </tr>
+       @empty
+           <td colspan="3">NO Data found</td>
        </tbody>
     </table>
-    @empty
-        <td colspan="3">NO Data found</td>
+
 
     @endforelse
 

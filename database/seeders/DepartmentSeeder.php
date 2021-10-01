@@ -15,11 +15,11 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-//        for($i=0;$i<20;$i++)
-//        {
-//            $department = new Department();
-//            $department->name = Str::random(10);
-//            $department->save();
-//        }
+        for($i=0;$i<20;$i++)
+        {
+            $department = new Department();
+            $department->name = 'abc';
+            $department->save();
+        }
     }
 }

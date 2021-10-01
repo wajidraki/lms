@@ -37,10 +37,11 @@
            <td>{{$instituation->phone_number}}</td>
            <td>{{$instituation->address}}</td>
        </tr>
+       @empty
+           <td colspan="3">NO Data found</td>
        </tbody>
     </table>
-    @empty
-        <td colspan="3">NO Data found</td>
+
 
     @endforelse
 

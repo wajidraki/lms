@@ -20,4 +20,5 @@ Route::post('/departemnt/store',[ DepartmentController::class, 'store'])->name('
 
 Route::get('/student',[ StudentController::class,'index']);
 Route::post('/student/store',[ StudentController::class,'store'])->name('student.store');
+Route::get('/students/{id}',[StudentController::class,'show'])->name('student.show');
 

@@ -41,7 +41,9 @@
                 <th>Father Name</th>
                 <th>contact</th>
                 <th>Departemnt/Level</th>
-                <th>Institation</th>
+{{--                <th>Institation</th>--}}
+                <th>Action</th>
+                <th>Action</th>
 
             </tr>
 
@@ -49,17 +51,21 @@
        <tbody>
        @forelse($students as $student)
        <tr>
-           <td>{{$loop->iteration}}</td>
+           <td>{{$student->iteration}}</td>
            <td>{{$student->name}}</td>
            <td>{{$student->father_name}}</td>
            <td>{{$student->contact}}</td>
            <td>{{$student->department->name}}</td>
-           <td>{{$student->instuate->name}}</td>
+{{--           <td>{{$student->instuate->name}}</td>--}}
+
+           <td><a href="{{Route('student.show',$student->id)}}--}}" class="btn btn-primary">view institation</a></td>
+           <td><a href="#" class="btn btn-primary">active Student</a></td>
        </tr>
+       @empty
+           <td colspan="3">NO Data found</td>
        </tbody>
     </table>
-    @empty
-        <td colspan="3">NO Data found</td>
+
 
     @endforelse
 

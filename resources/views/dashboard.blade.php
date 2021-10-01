@@ -6,7 +6,7 @@
 
     <nav class="navbar navbar-light bg-light" style="margin-top: 200px;">
         <div class="container-fluid">
-            <a href="#" class="btn btn-primary" name="department">ADD Department</a>
+            <a href="/department" class="btn btn-primary" name="department">ADD Department</a>
         </div>
     </nav>
     <nav class="navbar navbar-light bg-light">
@@ -16,7 +16,7 @@
     </nav>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a href="#" class="btn btn-primary" name="student">ADD Student</a>
+            <a href="/student" class="btn btn-primary" name="student">ADD Student</a>
         </div>
     </nav>
 

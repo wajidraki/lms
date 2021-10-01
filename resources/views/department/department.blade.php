@@ -1,16 +1,13 @@
 @extends('layout.app_layout')
 @section('content')
 
-    <h1 style="text-align: center;">Instituations</h1>
+    <h1 style="text-align: center;">Department</h1>
 
     <div class="row">
         <div class="col-md-4 offset-4">
-            <form action="{{route('institation.store')}}" method="post">
+            <form action="{{route('department.store')}}" method="post">
                 @csrf
-                <input type="text"name="name" CLASS="form-control" placeholder="Instituation Name">
-                <input type="number"name="phone" CLASS="form-control"placeholder="phone Number">
-                <input type="text"name="address" CLASS="form-control"placeholder="address">
-
+                <input type="text"name="department" class="form-control" placeholder="Department Name">
                 <button class="btn btn-primary"type="submit">save</button>
                 <button class="btn btn-danger"type="reset">Reset</button>
             </form>
@@ -19,23 +16,21 @@
     </div>
 
 
+
+
     <table class="table table-hover">
         <thead>
             <tr>
                 <th>S.NO</th>
                 <th>name</th>
-                <th>Phone Number</th>
-                <th>Address</th>
             </tr>
 
         </thead>
        <tbody>
-       @forelse($instituations as $instituation)
+       @forelse($departments as $department)
        <tr>
            <td>{{$loop->iteration}}</td>
-           <td>{{$instituation->name}}</td>
-           <td>{{$instituation->phone_number}}</td>
-           <td>{{$instituation->address}}</td>
+           <td>{{$department->name}}</td>
        </tr>
        </tbody>
     </table>

@@ -11,9 +11,8 @@
                 <th>Father Name</th>
                 <th>contact</th>
                 <th>Departemnt/Level</th>
-{{--                <th>Institation</th>--}}
-                <th>Action</th>
-                <th>Action</th>
+                <th>Institation</th>
+
 
             </tr>
 
@@ -26,8 +25,7 @@
            <td>{{$students->father_name}}</td>
            <td>{{$students->contact}}</td>
            <td>{{$students->department->name}}</td>
-{{--           <td>{{$student->instuate->name}}</td>--}}
-{{--           {{Route('studnetno.show',$student->id)}}--}}
+           <td>{{$students->instituation->name}}</td>
 
        </tr>
 

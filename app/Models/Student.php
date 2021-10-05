@@ -14,16 +14,12 @@ class Student extends Model
         return $this->belongsTo(Department::class);
     }
 
-    public function instuate(){
+    public function instituation(){
         return $this->belongsTo(Instituation::class);
     }
 
 
-    //scope
-    public function ScopeIsActive($query){
-        return $query->where('is_active',1);
-    }
-    public function ScopeIstuate($query){
-        return $query->where('name',NULL);
-    }
+
+
+
 }

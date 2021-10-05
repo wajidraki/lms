@@ -17,8 +17,8 @@
                </select>
 
                 <select class="form-select" name="instituation">
-                    @foreach($instuations as $instuate)
-                        <option value="{{$instuate->id}}">{{$instuate->name}}</option>
+                    @foreach($instuat as $institution)
+                        <option value="{{$institution->id}}">{{$institution->name}}</option>
                     @endforeach
                 </select>
 
@@ -41,7 +41,7 @@
                 <th>Father Name</th>
                 <th>contact</th>
                 <th>Departemnt/Level</th>
-{{--                <th>Institation</th>--}}
+                <th>Institation</th>
                 <th>Action</th>
                 <th>Action</th>
 
@@ -56,10 +56,10 @@
            <td>{{$student->father_name}}</td>
            <td>{{$student->contact}}</td>
            <td>{{$student->department->name}}</td>
-{{--           <td>{{$student->instuate->name}}</td>--}}
+           <td>{{$student->instituation->name}}</td>
 
-           <td><a href="{{Route('student.show',$student->id)}}--}}" class="btn btn-primary">view institation</a></td>
-           <td><a href="#" class="btn btn-primary">active Student</a></td>
+           <td><a href="{{Route('student.show',$student->id)}}--}}" class="btn btn-primary">view</a></td>
+           <td><a href="/noinstview" class="btn btn-primary">INFO</a></td>
        </tr>
        @empty
            <td colspan="3">NO Data found</td>

@@ -15,4 +15,15 @@ class Instituation extends Model
     }
 
 
+
+    //SCOPE
+    public function scopeNoStudentsInstitutes($query){
+        return $query->whereHas('students');
+    }
+
+        public function scopeIstuate($query){
+            return $query->whereDoesntHave('students');
+        }
+
+
 }

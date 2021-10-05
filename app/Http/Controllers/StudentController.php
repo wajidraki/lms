@@ -17,16 +17,14 @@ class StudentController extends Controller
     public function index()
     {
         //har teacher ko apna deportement dikanay kay liaay
-        $students = Student::with('department','instuate')
-                           ->isActive()
-//                            ->istuate()
-                              ->get();
-
+        $students = Student::with('department','instituation')
+//                           ->isActive()
+                           ->get();
         //this is for show deportment in dorp donown
         $departments = Department::all();
-        $instuations = Instituation::all();
+        $instuat = Instituation::all();
 
-        return view('student.student', compact('students','departments','instuations'));
+        return view('student.student', compact('students','departments','instuat'));
     }
 
     /**

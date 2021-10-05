@@ -18,6 +18,15 @@ class InstituationController extends Controller
         $instituations = Instituation::all();
         return view('instituation.instuations', compact('instituations'));
     }
+        public function indexo()
+        {
+
+            $instituations = Instituation::noStudentsInstitutes()->get();
+            $instit = Instituation::istuate()->get();
+            return view('instituation.VIEW', compact('instituations','instit'));
+
+
+        }
 
 
     /**
